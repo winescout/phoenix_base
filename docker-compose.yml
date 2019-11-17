@@ -4,7 +4,7 @@ services:
     build: .
     image: "${REGISTRY_HOST}${REGISTRY_URI}:${TAG:-master}"
     volumes:
-      - .:/usr/src/myapp
+      - .:/usr/src/webapp
     stdin_open: true
     tty: true
     env_file:
