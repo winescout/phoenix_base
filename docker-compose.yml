@@ -14,7 +14,6 @@ services:
       - "${DEV_PORT}"
     depends_on:
       - postgres
-    command: bash -c "cat config/config.exs && mix phx.server"
   postgres:
     image: postgres
     env_file:

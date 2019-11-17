@@ -2,10 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :hello, Hello.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "hello_test",
-  hostname: "postgres",
+  username: System.get_env("POSTGRES_USER"),
+  password: System.get_env("POSTGRES_PASSWORD"),
+  database: System.get_env("POSTGRES_TEST_DB"),
+  hostname: System.get_env("POSTGRES_HOST"),
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
